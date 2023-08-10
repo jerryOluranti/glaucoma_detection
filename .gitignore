@@ -9,6 +9,13 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
+bin/
+grouped/
+include/
+out/
+LAG_database_part_1/
+test/
+share/
 develop-eggs/
 dist/
 downloads/
@@ -51,6 +58,8 @@ coverage.xml
 .pytest_cache/
 cover/
 
+test.zip
+LAG_database_part_1.rar
 # Translations
 *.mo
 *.pot
