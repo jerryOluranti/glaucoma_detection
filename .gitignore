@@ -35,6 +35,10 @@ MANIFEST
 
 dataset_lag/
 out_enhanced/
+swin_out/
+swin_uncropped_out/
+odir-5k/
+odir-5k.zip
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
