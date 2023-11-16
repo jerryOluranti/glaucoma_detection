@@ -19,8 +19,8 @@ def compute_metrics(eval_pred):
     # return metrics.compute(predictions=predictions)
 
 train, test, id2label, label2id = VisionDataset.fromImageFolder(
-  "./odir-5k/",
-  test_ratio   = 0.25,
+  "./odir-5k-cropped/",
+  test_ratio   = 0.30,
   balanced     = True,
   augmentation = True,
 )
@@ -30,13 +30,14 @@ model = "microsoft/swin-tiny-patch4-window7-224"
 feature_extractor = AutoFeatureExtractor.from_pretrained(model)
 
 trainer = VisionClassifierTrainer(
-	model_name   = "GlaucomaSwinUncropped",
+	model_name   = "GlaucomaSwinODIRCropped4",
 	train        = train,
 	test         = test,
-	output_dir   = "./swin_uncropped_out/",
-	max_epochs   = 10,
+	output_dir   = "./swin_odir_cropped_out_4/",
+	max_epochs   = 5,
 	batch_size   = 32, # On RTX 2080 Ti
 	lr	     = 2e-5,
+	# lr	     = 0.5,
 	fp16	     = False,
 	model = SwinForImageClassification.from_pretrained(
 	    model,

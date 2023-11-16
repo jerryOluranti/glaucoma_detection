@@ -39,6 +39,11 @@ swin_out/
 swin_uncropped_out/
 odir-5k/
 odir-5k.zip
+swin_out.zip
+swin_uncropped_out.zip
+eval/
+odir-5k-cropped/
+swin_odir_cropped_out/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
